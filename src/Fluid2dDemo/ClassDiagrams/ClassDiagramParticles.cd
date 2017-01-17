@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Fluid.FluidSimulation">
+    <Position X="0.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>FluidSimulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fluid.FluidParticle">
+    <Position X="5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAAAAAggAAAAAABAAAAAIAAAAAAAACNAAA=</HashCode>
+      <FileName>Particles\FluidParticle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fluid.FluidParticles" Collapsed="true">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Particles\FluidParticles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fluid.ParticleConsumer">
+    <Position X="7.5" Y="4.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAIAAAAAIAgAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Particles\ParticleConsumer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fluid.ParticleConsumers" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Particles\ParticleConsumers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fluid.ParticleEmitter">
+    <Position X="10.25" Y="4.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAgAAAAAIQgACAAABAAAKIAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Particles\ParticleEmitter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fluid.ParticleEmitters" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Particles\ParticleEmitters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fluid.ParticleSystem">
+    <Position X="9" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAADABAAIAAAAAAAgAAAAAAAAACAAAgAEA=</HashCode>
+      <FileName>Particles\ParticleSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Emitters" />
+      <Property Name="Consumers" />
+      <Property Name="Particles" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Fluid.Blobs">
+    <Position X="0.5" Y="3.25" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>kAAKAAAAACAAAAAAAAAFAAAAAAAQAAEAABAIoEAQAQA=</HashCode>
+      <FileName>Blobs\Blobs.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenTK.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:OpenTK.Graphics.TextHandle">
+            <summary>
+            Represents a handle to cached text.
+            </summary>
+        </member>
+        <member name="F:OpenTK.Graphics.TextHandle.Handle">
+            <summary>
+            The handle of the cached text. Call the OpenTK.Graphics.ITextPrinter.Draw() method
+            to draw the text represented by this TextHandle.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.TextHandle.ToString">
+            <summary>
+            Returns a System.String that represents the current TextHandle.
+            </summary>
+            <returns>a System.String that descibes the current TextHandle.</returns>
+        </member>
+        <member name="T:OpenTK.Graphics.DisplayListTextPrinter">
+            <summary>
+            Provides text printing through OpenGL 1.1 Display Lists.
+            </summary>
+        </member>
+        <member name="T:OpenTK.Graphics.ITextPrinterImplementation">
+            <summary>
+            Defines the interface for TextPrinter implementations.
+            </summary>
+        </member>
+        <member name="T:OpenTK.Graphics.Glyph">
+            <summary>
+            Represents a single character of a specific Font.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.Glyph.#ctor(System.Char,System.Drawing.Font)">
+            <summary>
+            Constructs a new Glyph that represents the given character and Font.
+            </summary>
+            <param name="c">The character to represent.</param>
+            <param name="f">The Font of the character.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.Glyph.Equals(OpenTK.Graphics.Glyph)">
+            <summary>
+            Compares the current Glyph with the given Glyph.
+            </summary>
+            <param name="other">The Glyph to compare to.</param>
+            <returns>True if both Glyphs represent the same character of the same Font, false otherwise.</returns>
+        </member>
+        <member name="P:OpenTK.Graphics.Glyph.Character">
+            <summary>
+            Gets the character represented by this Glyph.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Graphics.Glyph.Font">
+            <summary>
+             Gets the Font of this Glyph.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Graphics.Glyph.Width">
+            <summary>
+            Gets an integer representing the width of the Glyph in pixels.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Graphics.Glyph.Height">
+            <summary>
+            Gets an integer representing the height of the Glyph in pixels.
+            </summary>
+        </member>
+        <member name="T:OpenTK.Graphics.ITextPrinter">
+            <summary>
+            Defines the interface for a TextPrinter.
+            </summary>
+        </member>
+        <member name="T:OpenTK.Graphics.TextPrinter">
+            <summary>
+            Provides methods to perform layout and print hardware accelerated text.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.#ctor">
+            <summary>
+            Constructs a new DefaultLayoutProvider object.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.CheckNeededFunctionality">
+            <summary>
+            Checks the machine's capabilities and selects the fastest method to print text.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.Prepare(System.String,OpenTK.Graphics.TextureFont,OpenTK.Graphics.TextHandle@)">
+            <summary>
+            Prepares text for drawing.
+            </summary>
+            <param name="text">The string to draw.</param>
+            <param name="font">The font to use for drawing.</param>
+            <param name="handle">The handle to the cached text. Use this to draw the text with the Draw() function.</param>
+            <see cref="!:TextPrinter.Draw()"/>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.Prepare(System.String,OpenTK.Graphics.TextureFont,OpenTK.Graphics.TextHandle@,System.Single,System.Boolean)">
+            <summary>
+            Prepares text for drawing.
+            </summary>
+            <param name="text">The string to draw.</param>
+            <param name="font">The font to use for drawing.</param>
+            <param name="handle">The handle to the cached text. Use this to draw the text with the Draw() function.</param>
+            <param name="width">Not implemented.</param>
+            <param name="wordWarp">Not implemented.</param>
+            <see cref="!:TextPrinter.Draw()"/>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.Prepare(System.String,OpenTK.Graphics.TextureFont,OpenTK.Graphics.TextHandle@,System.Single,System.Boolean,System.Drawing.StringAlignment)">
+            <summary>
+            Prepares text for drawing.
+            </summary>
+            <param name="text">The string to draw.</param>
+            <param name="font">The font to use for drawing.</param>
+            <param name="handle">The handle to the cached text. Use this to draw the text with the Draw() function.</param>
+            <param name="width">Not implemented.</param>
+            <param name="wordWarp">Not implemented.</param>
+            <param name="alignment">Not implemented.</param>
+            <see cref="!:TextPrinter.Draw()"/>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.Prepare(System.String,OpenTK.Graphics.TextureFont,OpenTK.Graphics.TextHandle@,System.Single,System.Boolean,System.Drawing.StringAlignment,System.Boolean)">
+            <summary>
+            Prepares text for drawing.
+            </summary>
+            <param name="text">The string to draw.</param>
+            <param name="font">The font to use for drawing.</param>
+            <param name="handle">The handle to the cached text. Use this to draw the text with the Draw() function.</param>
+            <param name="width">Not implemented.</param>
+            <param name="wordWarp">Not implemented.</param>
+            <param name="alignment">Not implemented.</param>
+            <param name="rightToLeft">Not implemented.</param>
+            <see cref="!:TextPrinter.Draw()"/>
+            <exception cref="T:System.NotSupportedException">Occurs when OpenGL 1.1 is not supported.</exception>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.Draw(OpenTK.Graphics.TextHandle)">
+            <summary>
+            Draws the cached text referred to by the TextHandle.
+            </summary>
+            <param name="handle">The TextHandle to the cached text.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.Draw(System.String,OpenTK.Graphics.TextureFont)">
+            <summary>
+            Draws dynamic text without caching. Not implemented yet!
+            </summary>
+            <param name="text">The System.String to draw.</param>
+            <param name="font">The OpenTK.Graphics.TextureFont to draw the text in.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.Begin">
+            <summary>
+            Sets up OpenGL state for drawing text.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.TextPrinter.End">
+            <summary>
+            Restores OpenGL state.
+            </summary>
+        </member>
+        <member name="T:OpenTK.Graphics.VboTextPrinter">
+            <summary>
+            Provides text printing through OpenGL 1.5 vertex buffer objects.
+            </summary>
+        </member>
+        <member name="T:OpenTK.Graphics.VboTextHandle">
+            <summary>
+            Contains the necessary information to print text through the VboTextPrinter implementation.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.#ctor(System.Drawing.Font)">
+            <summary>
+            Constructs a new TextureFont object, using the specified System.Drawing.Font.
+            </summary>
+            <param name="font">The System.Drawing.Font to use.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.PrepareTexturePacker">
+            <summary>
+            Calculates the optimal size for the font texture and TexturePacker, and creates both.
+            </summary>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.LoadGlyphs(System.String)">
+            <summary>
+            Prepares the specified glyphs for rendering.
+            </summary>
+            <param name="glyphs">The glyphs to prepare for rendering.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.LoadGlyph(System.Char)">
+            <summary>
+            Prepares the specified glyph for rendering.
+            </summary>
+            <param name="glyphs">The glyph to prepare for rendering.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.LoadGlyph(System.Char,OpenTK.Math.Box2@)">
+            <summary>
+            Adds a glyph to the texture packer.
+            </summary>
+            <param name="c">The character of the glyph.</param>
+            <param name="rectangle">An OpenTK.Math.Box2 that will hold the buffer for this glyph.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.GlyphData(System.Char,System.Single@,System.Single@,OpenTK.Math.Box2@,System.Int32@)">
+            <summary>
+            Returns the characteristics of a loaded glyph.
+            </summary>
+            <param name="glyph">The character corresponding to this glyph.</param>
+            <param name="width">The width of this glyph.</param>
+            <param name="height">The height of this glyph (line spacing).</param>
+            <param name="textureRectangle">The bounding box of the texture buffer of this glyph.</param>
+            <param name="texture">The handle to the texture that contains this glyph.</param>
+            <returns>True if the glyph has been loaded, false otherwise.</returns>
+            <seealso cref="M:OpenTK.Graphics.TextureFont.LoadGlyphs(System.String)"/>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.MeasureString(System.String,System.Single@,System.Single@,System.Boolean)">
+            <summary>
+            Measures the width of the specified string.
+            </summary>
+            <param name="str">The string to measure.</param>
+            <param name="width">The measured width.</param>
+            <param name="height">The measured height.</param>
+            <param name="addSpace">If true, adds space to account for glyph overhangs. Set to true if you wish to measure a complete string. Set to false if you wish to perform layout on adjacent strings.</param>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.MeasureString(System.String,System.Single@,System.Single@)">
+            <summary>
+            Measures the width of the specified string.
+            </summary>
+            <param name="str">The string to measure.</param>
+            <param name="width">The measured width.</param>
+            <param name="height">The measured height.</param>
+            <seealso cref="!:public void MeasureString(string str, out float width, out float height, bool accountForOverhangs)"/>
+        </member>
+        <member name="M:OpenTK.Graphics.TextureFont.Dispose">
+            <summary>
+            Releases all resources used by this OpenTK.Graphics.TextureFont.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Graphics.TextureFont.Height">
+            <summary>
+            Gets a float indicating the default line spacing of this font.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Graphics.TextureFont.Width">
+            <summary>
+            Gets a float indicating the default line spacing of this font.
+            </summary>
+        </member>
+        <member name="P:OpenTK.Graphics.TextureFont.Texture">
+            <summary>
+            Gets the handle to the texture were this font resides.
+            </summary>
+        </member>
+        <member name="T:OpenTK.Audio.AudioReaderException">
+            <summary>Represents exceptions related to OpenTK.Audio.AudioReader objects.</summary>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReaderException.#ctor">
+            <summary>Constructs a new AudioReaderException.</summary>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReaderException.#ctor(System.String)">
+            <summary>Constructs a new AudioReaderException with the specified error message.</summary>
+            <param name="message">The error message of the AudioReaderException.</param>
+        </member>
+        <member name="T:OpenTK.Audio.AudioReader">
+            <summary>
+            Encapsulates a sound stream and provides decoding and streaming capabilities.
+            </summary>
+            <typeparam name="SampleType"></typeparam>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReader.#ctor(System.String)">
+            <summary>Creates a new AudioReader that can read the specified sound file.</summary>
+            <param name="filename">The path to the sound file.</param>
+            <returns>A new OpenTK.Audio.AudioReader, which can be used to read from the specified sound file.</returns>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReader.#ctor(System.IO.Stream)">
+            <summary>Creates a new AudioReader that can read the specified soundstream.</summary>
+            <param name="s">The System.IO.Stream to read from.</param>
+            <returns>A new OpenTK.Audio.AudioReader, which can be used to read from the specified sound stream.</returns>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReader.Supports(System.IO.Stream)">
+            <summary>When overriden in a derived class, checks if the decoder supports the specified sound stream.</summary>
+            <param name="s">The System.IO.Stream to check.</param>
+            <returns>True if the sound stream is supported; false otherwise.</returns>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReader.ReadSamples(System.Int64)">
+            <summary>
+            When overriden in a derived class, reads and decodes the specified number of samples from the sound stream.
+            </summary>
+            <param name="samples">The number of samples to read and decode.</param>
+            <returns>An OpenTK.Audio.SoundData object that contains the decoded buffer.</returns>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReader.ReadToEnd">
+            <summary>
+            When overriden in a derived class, reads and decodes the sound stream.
+            </summary>
+            <returns>An OpenTK.Audio.SoundData object that contains the decoded buffer.</returns>
+        </member>
+        <member name="M:OpenTK.Audio.AudioReader.Dispose">
+            <summary>Closes the underlying Stream and disposes of the AudioReader resources.</summary>
+        </member>
+        <member name="P:OpenTK.Audio.AudioReader.Frequency">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OpenTK.Audio.WaveReader.Supports(System.IO.Stream)">
+            <summary>
+            Checks whether the specified stream contains valid WAVE/RIFF buffer.
+            </summary>
+            <param name="s">The System.IO.Stream to check.</param>
+            <returns>True if the stream is a valid WAVE/RIFF file; false otherwise.</returns>
+        </member>
+        <member name="M:OpenTK.Audio.WaveReader.ReadSamples(System.Int64)">
+            <summary>
+            Reads and decodes the specified number of samples from the sound stream.
+            </summary>
+            <param name="samples">The number of samples to read and decode.</param>
+            <returns>An OpenTK.Audio.SoundData object that contains the decoded buffer.</returns>
+        </member>
+        <member name="M:OpenTK.Audio.WaveReader.ReadToEnd">
+            <summary>
+            Reads and decodes the sound stream.
+            </summary>
+            <returns>An OpenTK.Audio.SoundData object that contains the decoded buffer.</returns>
+        </member>
+    </members>
+</doc>
